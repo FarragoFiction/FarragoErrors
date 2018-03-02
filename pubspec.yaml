@@ -1,0 +1,25 @@
+name: FarragoErrors
+description: Error page handler for FarragoFiction
+version: 0.0.1
+
+environment:
+  sdk: '>=1.24.0 <2.0.0'
+
+dependencies:
+  RenderingLib:
+    git: git://github.com/jadedResearcher/RenderingLib.git
+
+dev_dependencies:
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+
+transformers:
+- $dart2js:
+    sourceMaps: true
+    commandLineOptions: [--fast-startup]
+
+# Uncomment the following in sdk 1.24+ to make pub serve
+# use dartdevc (webdev.dartlang.org/tools/dartdevc).
+web:
+  compiler:
+    debug: dartdevc

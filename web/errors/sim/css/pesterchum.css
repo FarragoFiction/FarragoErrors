@@ -1,0 +1,108 @@
+
+div.pesterchum {
+    border: 2px solid #FFFF00;
+    background-color: #fdb302;
+    padding-bottom:5px;
+
+    font-family: courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+div.pesterchum_header {
+    width:100%;
+    height:26px;
+    background-color: #c48a00;
+    color: #ffffff;
+    text-align:center;
+    line-height:26px;
+}
+
+div.pesterchum_title {
+    height:21px;
+}
+
+div.pesterchum_title div {
+    background-image: url("/errors/sim/images/pesterlog.png");
+    width:67px;
+    height:8px;
+    left: 19px;
+    top: 8px;
+}
+
+div.pesterchum_chat {
+    border: 2px solid #c48a00;
+    background-color: #ffffff;
+    margin:0 10px 0 10px;
+    padding:10px;
+    overflow-y:auto;
+    word-wrap:break-word;
+}
+
+table.pesterchum_lower {
+    width:100%;
+    height:22px;
+    padding:0 10px 0 10px;
+    box-sizing:border-box;
+    margin:4px 0 0 0;
+    border-spacing:0;
+}
+
+table.pesterchum_lower tbody {
+    padding:0;
+    margin:0;
+}
+
+table.pesterchum_lower trow {
+    padding:0;
+    margin:0;
+}
+
+td.pesterchum_input {
+    height:18px;
+    border: 2px solid #c48a00;
+    padding:0;
+    background-color:#FFFFFF;
+}
+
+input.pesterchum_input {
+    border:0 none;
+    margin:0;
+    height:100%;
+    width:100%;
+    padding:0 3px 0 3px;
+    box-sizing:border-box;
+
+    font-family: courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    background-color:transparent;
+}
+
+td.pesterchum_button {
+    padding: 0 0 0 3px;
+    width:87px;
+    height:22px;
+}
+
+td.pesterchum_button>div {
+    background-color: #FFFF00;
+    width:84px;
+    height:18px;
+    border: 2px solid #c48a00;
+    padding:0;
+    cursor:pointer;
+}
+
+td.pesterchum_button>div>div {
+    background-image: url("/errors/sim/images/pester.png");
+    width:46px;
+    height:8px;
+    left:17px;
+    top:5px;
+}
+
+span.pl {
+    color: #0d378e;
+}
+

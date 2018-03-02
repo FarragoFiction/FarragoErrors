@@ -1,0 +1,128 @@
+* {
+    position:relative;
+}
+
+body {
+    background-color:black;
+    background-image:url("/errors/sim/images/copypasta_pl.png");
+}
+
+div#error {
+    width:100%;
+    text-align:center;
+    height:300px;
+    margin-top:100px;
+}
+
+div#error div.symbol {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+}
+
+div#error div.shadow_offset {
+    position:absolute;
+    right:50%;
+    top:-150px;
+}
+
+div#error div.shadow {
+    position: relative;
+    width:600px;
+    height:600px;
+
+    right:-50%;
+    background: transparent;
+    background: radial-gradient(circle closest-side at 50% 50%, rgba(0,0,0,1.0), rgba(0,0,0,0.0));
+}
+
+div#error h1, div#error h2, #arrowcontainer, div.links a {
+    font-family:"Courier", monospace;
+    color: rgb(34,66,142);
+}
+
+div#error h1 {
+    font-size:250px;
+    margin:0;
+    line-height:300px;
+    text-shadow:0 0 2px black, 0 0 8px black, 0 0 10px black, 0 0 20px black, 0 0 30px black, 0 0 40px black;
+}
+
+div#error h2 {
+    font-size:40px;
+    margin:0;
+    top:-80px;
+    font-weight: bold;
+    text-shadow:0 0 2px black, 0 0 5px black, 0 0 8px black;
+}
+
+div.content {
+    width:1000px;
+    margin:auto;
+}
+
+div#pesterchum {
+    display:inline-block;
+    width:695px;
+    margin-top:120px;
+    right:0;
+}
+
+div#chat {
+    height:250px;
+
+}
+
+img#pl {
+    float:left;
+    z-index:1000;
+}
+
+div#arrowcontainer {
+    display:inline-block;
+    position:relative;
+    font-size:60px;
+    font-weight: bold;
+    font-family: courier, monospace;
+
+    width:125px;
+    text-align:center;
+    right:0;
+    margin:20px 285px 20px 285px;
+    cursor:pointer;
+    text-shadow:0 0 2px black, 0 0 5px black, 0 0 8px black, 0 0 20px black, 0 0 25px black, 0 0 30px black, 0 0 40px black;
+}
+
+div.links {
+    /*z-index:-10;*/
+
+    background-color:black;
+    width:1000px;
+    height:150px;
+    margin:40px 0 90px 0;
+
+    box-shadow:0 0 3px black, 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 30px black, 0 0 40px black, 0 0 60px black, 0 0 80px black, 0 0 100px black;
+    box-sizing:border-box;
+    padding:35px 0 0 0;
+}
+
+div.links a {
+    display:inline-block;
+    width:330px;
+    padding:10px 0px 10px 40px;
+    box-sizing:border-box;
+    font-size:18px;
+    font-weight: bold;
+    font-family: courier, monospace;
+    text-decoration:none;
+}
+
+div.links a:hover, div#arrowcontainer:hover {
+    color: rgb(79,123,225);
+}
+
+div.links a:visited {
+    color: rgb(34,66,142);
+}
