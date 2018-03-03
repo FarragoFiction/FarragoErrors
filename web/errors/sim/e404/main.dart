@@ -164,6 +164,45 @@ void intro() {
     }
 }
 
+List<List<List<String>>> chatResponses = <List<List<String>>>[
+    <List<String>>[ // first reply
+        <String>["..."],
+        <String>["hm"],
+        <String>["hmmm"],
+        <String>["uh..."],
+    ],
+    <List<String>>[ // second
+        <String>["look, this is great and all", "but it's not *interesting*"],
+        <String>["you could ask anything", "and you say that..."],
+        <String>["come on... ask something fun"],
+        <String>["perhaps if you asked something interesting", "you'd get an answer"],
+    ],
+    <List<String>>[ // third
+        <String>["right..."],
+        <String>["..."],
+        <String>["...", "hm"],
+        <String>["sure..."],
+    ],
+    <List<String>>[ // fourth
+        <String>["ugh", "this is getting boring"],
+        <String>["hmph", "you gonna ask anything relevant?"],
+        <String>["snore", "'bout ready to fall asleep here"],
+        <String>["this is getting boring", "got anything good to ask?"],
+    ],
+    <List<String>>[ // fifth
+        <String>["really?"],
+        <String>["sigh...", "come on"],
+        <String>["laaame"],
+        <String>["..."],
+    ],
+    <List<String>>[ // sixth
+        <String>["I'm just gonna ignore you now", "unless you ask the right stuff of course..."],
+        <String>["nah, this is going nowhere", "ask something interesting or I'm out"],
+        <String>["look, I've got things to be doing", "ask something good or don't bother"],
+        <String>["if you're not going to be asking anything interesting", "I'm just gonna go do something else..."],
+    ],
+];
+
 void process_reading(String text) {
     String subject = getSubject(text);
     //print(subject);
@@ -296,6 +335,12 @@ void process_reading(String text) {
                 <String>["one of the IdeasWranglers", "$name contributed designs or ideas to the sim which were useful enough to be added"],
             ]));
         }
+    } else if (subject == "chat") {
+        int count = getMemory("chat");
+        if (count >= chatResponses.length) { return; }
+        List<List<String>> responses = chatResponses[count];
+
+        pl_write_multi(rand.pickFrom(responses));
     }
 
     if (subject != null) {
@@ -425,6 +470,8 @@ String getSubject(String input, [bool url = false]) {
                 }
             }
         }
+
+        return "chat";
     }
 
     return null;
